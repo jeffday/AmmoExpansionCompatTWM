@@ -10,6 +10,7 @@ class CfgPatches
 			"DZ_Weapons_Firearms",
 			"DZ_Weapons_Magazines",
 			"Ammo_AE57x28",
+			"Banshee",
 			"TWM_FN57"
 		};
 	}
@@ -68,6 +69,15 @@ class cfgWeapons
 			"Ammo_AE57x28"
 		};
 	}
+
+	class M4A1_Base;
+	class TWM_Banshee57_Base: M4A1_Base
+	{
+		chamberableFrom[]+=
+		{
+			"Ammo_AE57x28"
+		};
+	}
 };
 
 class CfgMagazines
@@ -76,6 +86,16 @@ class CfgMagazines
 	class Magazine_Base;
 
 	class TWM_Mag_FN57: Magazine_Base
+	{
+		ammo="TWM_Bullet_57x28";
+		ammoItems[]+=
+		{
+			"Ammo_AE57x28"
+		};
+	}
+
+	class Mag_CZ527_5rnd;
+	class TWM_Mag_Banshee_57: Mag_CZ527_5rnd
 	{
 		ammo="TWM_Bullet_57x28";
 		ammoItems[]+=
